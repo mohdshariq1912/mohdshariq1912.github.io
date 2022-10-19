@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet" />
+        <style>
+            .container { 
+              height: 200px;
+              position: relative;
+              border: 3px solid green; 
+            }
+            
+            .center {
+              margin: 0;
+              position: absolute;
+              top: 5%;
+              left: 50%;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+            /* input{
+       margin: auto;
+       display: block;
+    } */
+            </style>
+    </head>
+    <body>
+        <!-- <button onclick="myFunction()">Enter room id</button> -->
+        <div >
+            <input placeholder="Enter username..."
+                    type="text"
+                    id="username-input" /><br>
+            <button onclick="sendroomId()">Send</button>
+            <button onclick="start()">Start Call</button>
+            <button onclick="muteVideo()">Mute Video</button>
+                <button onclick="muteAudio()">Mute Audio</button>
+                <button onclick="closs()">End call</button>
+
+            
+        </div>
+        <!-- <div id="video-call-div">
+            <video muted id="local-video" autoplay></video>
+            <video id="remote-video" autoplay></video>
+            <div class="call-action-div">
+                <button onclick="muteVideo()">Mute Video</button>
+                <button onclick="muteAudio()">Mute Audio</button>
+            </div>
+        </div> -->
+
+        <script src="./peerjs.js"></script>
+
+        <video class="secondary-video" autoplay id="remote-video"></video>
+        <video class="primary-video" autoplay muted id="local-video"></video>
+
+        <script src="./call.js">
+           
+            
+        </script>
+        
+
+    </body>
+</html>
